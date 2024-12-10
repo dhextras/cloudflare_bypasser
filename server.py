@@ -2,9 +2,8 @@ import os
 from functools import wraps
 
 import dotenv
-from flask import Flask, jsonify, request
-
 from bypass_cloudflare import bypasser
+from flask import Flask, jsonify, request
 
 # Load environment variables & Initialize Falsk App
 dotenv.load_dotenv()
@@ -67,9 +66,7 @@ def handle_500(error):
     """
 
     return (
-        jsonify(
-            {"status": "error", "message": "Internal server error", "error": str(error)}
-        ),
+        jsonify({"status": "error", "message": f"Internal server Error, {str(error)}"}),
         500,
     )
 

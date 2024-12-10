@@ -89,7 +89,6 @@ def bypasser(url, log_dir="logs"):
             cookies = {
                 "cf_clearance": cookies_dict.get("cf_clearance", None),
                 "user_agent": driver.user_agent,
-                "url": url,
             }
 
             # Save cookies
@@ -97,7 +96,7 @@ def bypasser(url, log_dir="logs"):
                 json.dump(cookies, f, indent=2)
 
             log_f.write(f"Cloudflare bypass successful for {url}\n")
-            return {"status": "success", "cookies_file": cookies_file_path, "url": url}
+            return {"status": "success", "cookies": cookies, "url": url}
 
     except Exception as e:
         with open(log_file_path, "a") as log_f:
