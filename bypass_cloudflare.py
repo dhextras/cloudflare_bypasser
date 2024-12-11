@@ -66,7 +66,7 @@ def bypasser(url, log_dir="logs"):
                     button = _find_cloudflare_button(driver)
 
                     if button:
-                        button.click()
+                        # button.click()
                         pyautogui.click()
                         pyautogui.moveTo(424, 470)
                         pyautogui.click()
