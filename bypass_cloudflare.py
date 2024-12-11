@@ -3,6 +3,7 @@ import os
 import time
 from datetime import datetime
 
+import pyautogui
 from DrissionPage import ChromiumOptions, ChromiumPage
 
 
@@ -62,7 +63,9 @@ def bypasser(url, log_dir="logs"):
                     button = _find_cloudflare_button(driver)
 
                     if button:
-                        button.click()
+                        # button.click()
+                        pyautogui.move(424, 470)
+                        pyautogui.click()
                         log_f.write("Verification button clicked\n")
                     else:
                         log_f.write("Verification button not found\n")
