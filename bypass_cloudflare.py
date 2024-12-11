@@ -6,6 +6,9 @@ from datetime import datetime
 import pyautogui
 from DrissionPage import ChromiumOptions, ChromiumPage
 
+# Disable the fail-safe
+pyautogui.FAILSAFE = False
+
 
 def bypasser(url, log_dir="logs"):
     """
