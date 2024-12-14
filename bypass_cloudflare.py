@@ -73,7 +73,7 @@ def bypasser(url, log_dir="logs"):
                     if button:
                         # button.click()
                         pyautogui.click()
-                        pyautogui.moveTo(424, 470)
+                        pyautogui.moveTo(564, 408)
                         pyautogui.click()
                         log_f.write("Verification button clicked\n")
                     else:
