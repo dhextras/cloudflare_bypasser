@@ -3,11 +3,16 @@ import os
 import time
 from datetime import datetime
 
-# import pyautogui
+# TODO: MAKE THIS into the utils bypasser and just remove this piece of shit repo 
+# choose some apropriate server and then host the things there for grizzly and muddy waters
+# And conut the things like the instances and shits and update it 
+# Update the secrets for ticker and also the instance ec2 secrets all those after this 
+# check the bearcave shits
+import pyautogui
 from DrissionPage import ChromiumOptions, ChromiumPage
 
-# # Disable the fail-safe
-# pyautogui.FAILSAFE = False
+# Disable the fail-safe
+pyautogui.FAILSAFE = False
 
 
 def bypasser(url, log_dir="logs"):
@@ -66,10 +71,10 @@ def bypasser(url, log_dir="logs"):
                     button = _find_cloudflare_button(driver)
 
                     if button:
-                        button.click()
-                        # pyautogui.click()
-                        # pyautogui.moveTo(424, 470)
-                        # pyautogui.click()
+                        # button.click()
+                        pyautogui.click()
+                        pyautogui.moveTo(424, 470)
+                        pyautogui.click()
                         log_f.write("Verification button clicked\n")
                     else:
                         log_f.write("Verification button not found\n")
